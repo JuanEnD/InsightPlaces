@@ -46,17 +46,24 @@ O projeto usou uma base de dados de imóveis na cidade do Rio de Janeiro, onde a
 -   **Semana 3 e 4:** Criando um modelo de recomendação com PySpark: Onde vou criar um recomendador de imóveis.
 <!-- -   **Semana 4:** Ajustes gerais e correções de bugs. -->
 
-### -  **1º semana:**
+### -  **1º semana:** ✔️ 
 Na primeira semana eu baixei a biblioteca do PySpark para iniciar a leitura da base de dados para utilizar no projeto, depois de ler os dados fui explorar para tratar os dados, separar cada um dos camps da Base de Dados e deixar apenas as informações do campo "anuncio" já que nessa base tinha 3 campos principais que eram: Anuncio, Imagem e Usuario. 
 
 Então, como precisaria para analisar apenas as informações do campo Anuncio eu apaguei as outras e foquei em analisar as colunas desse campo. Após fazer essa separação comecei a analisar e fazer todos os tratamentos de cada uma das colunas, um deles foi transformar os dados das colunas "quartos", "suites", "banheiros", "vaga", "area_total" e "area_util" de listas para inteiros. Em seguida, precisei extrair da coluna "endereco" apenas as informações de "zona" e "bairro" para transformar apenas elas duas como colunas no DataFrame, logo depois fui separar os campos da coluna "valores" para cada uma ser um campo ser coluna assim como tinha feito na coluna "endereco" já que nessa coluna "valores" tinha as informações de condominio, iptu, tipo, e valor.
 
 Por último após tratar todos esses dados finalizei o Notebook salvando esse DataFrame que tinha criado com todas as informações de Anuncio no formato Parquet, que é um formato de arquivo de código aberto e orientado por colunas, ele é bastante eficiente quando se trata de armazenar e analisar grandes volumes de dados. Também salvei o DataFrame em CSV, depois fiz um teste de desempenho entre a leitura dos dois arquivos.
 
-### -  **2º semana:**
+### -  **2º semana:** ✔️
+
 No inicio do Notebook dessa semana utilizei a base de dados que teve algumas transformações e salvei no final da primeira semana, depois fiz uma etapa muito importante na construção de modelos de Machine Learning que é a seleção de features, escolhendo quais colunas são importante e descartar as irrelevantes para a análise reduzindo a complexidade dos dados inseridos que por conseequência o modelo irá demorar menos tempo para ser ajustado. Nesse processo descartei as colunas ("area_total", "tipo_anuncio", "tipo_unidade", "tipo_uso" e "tipo") e antes existia duas colunas com muitos dados iguais que eram a ('area_util', 'area_total'), então verifiquei qual das duas tinha mais dados nulos e descobri que era a ("area_total").
 
 Em seguida, converti os tipos de algumas colunas que estavam erradas, como por exemplo de numéricas das colunas "andar", "banheiros", "suites" e "quartos" para o tipo inteiro. Além disso também converti as colunas "area_util", "condominio", "iptu" e "valor" para o tipo double. Após isso fui fazer um tratamento da coluna características, porque ela possuia listas de strings como conteúdo de suas linhas, mas algumas dessas listas estão sem elementos. Então transformei essas listas sem elementos em valores nulos utilizando os recursos da biblioteca **functions** do PySpark, depois fiz um tratamento com os dados faltantes (nulos e NaN's) porque possui muito deles em todo o DataFrame e os modelos de Machine Learning não costumam trabalhar corretamente com dados nulos. 
 
 Então após todos esses tratamentos nas colunas comecei a preparação dos dados para os algoritmos do **Spark MLlib**, utilizei a técnica de vetorização dos dados e usei a classe **VectorAssembler** da biblioteca **pyspark.ml.feature**. Em seguida comecei a construção dos modelos de regressão para auxiliar na previsão dos valores de imóveis após os dados já estarem vetorizados, o primeiro modelo utilizado foi o **Random Forest** que é um modelo de Machine Learning que utiliza a técnica de ensemble learnin (aprendizado de ensemble), ele é composto por uma coleção de árvores de decisão onde cada uma dessas árvores é treinada com uma amostra aleatória do conjunto de dados. Assim o modelo no final faz a média dos resultados de cada uma das árvores para obter a predição mais correta.
 
+**[Todos os Detalhes](https://github.com/JuanEnD/InsightPlaces/tree/main/Semana%202)**
+
+
+### -  **3º semana:** Em Desenvolvimento
+
+### -  **4º semana:** Em Desenvolvimento
