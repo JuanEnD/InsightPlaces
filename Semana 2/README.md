@@ -1,4 +1,4 @@
-◆ 2º semana:
+- 2º semana:
 
 No inicio do Notebook dessa semana utilizei a base de dados que teve algumas transformações e salvei no final da primeira semana, depois fiz uma etapa muito importante na construção de modelos de Machine Learning que é a seleção de features, escolhendo quais colunas são importante e descartar as irrelevantes para a análise reduzindo a complexidade dos dados inseridos que por conseequência o modelo irá demorar menos tempo para ser ajustado. Nesse processo descartei as colunas ("area_total", "tipo_anuncio", "tipo_unidade", "tipo_uso" e "tipo") e antes existia duas colunas com muitos dados iguais que eram a ('area_util', 'area_total'), então verifiquei qual das duas tinha mais dados nulos e descobri que era a ("area_total").
 
