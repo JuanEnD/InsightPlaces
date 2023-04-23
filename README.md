@@ -61,7 +61,7 @@ Em seguida, converti os tipos de algumas colunas que estavam erradas, como por e
 
 Então após todos esses tratamentos nas colunas comecei a preparação dos dados para os algoritmos do **Spark MLlib**, utilizei a técnica de vetorização dos dados e usei a classe **VectorAssembler** da biblioteca **pyspark.ml.feature**. Em seguida comecei a construção dos modelos de regressão para auxiliar na previsão dos valores de imóveis após os dados já estarem vetorizados, o primeiro modelo utilizado foi o **Random Forest** que é um modelo de Machine Learning que utiliza a técnica de ensemble learnin (aprendizado de ensemble), ele é composto por uma coleção de árvores de decisão onde cada uma dessas árvores é treinada com uma amostra aleatória do conjunto de dados. Assim o modelo no final faz a média dos resultados de cada uma das árvores para obter a predição mais correta.
 
-**[Todos os Detalhes](https://github.com/JuanEnD/InsightPlaces/tree/main/Semana%202)**
+**[Todos os Detalhes](https://github.com/JuanEnD/InsightPlaces/tree/main/Semana_2)**
 
 
 ### -  **3º semana:** Em Desenvolvimento
