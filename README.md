@@ -49,6 +49,8 @@ O projeto usou uma base de dados de imóveis na cidade do Rio de Janeiro, onde a
 
 <!-- -   **Semana 4:** Ajustes gerais e correções de bugs. -->
 
+---
+
 ### -  **1º semana:** 
 
 Na primeira semana eu baixei a biblioteca do PySpark para iniciar a leitura da base de dados para utilizar no projeto, depois de ler os dados fui explorar para tratar os dados, separar cada um dos camps da Base de Dados e deixar apenas as informações do campo "anuncio" já que nessa base tinha 3 campos principais que eram: Anuncio, Imagem e Usuario.
@@ -56,6 +58,8 @@ Na primeira semana eu baixei a biblioteca do PySpark para iniciar a leitura da b
 Então, como precisaria para analisar apenas as informações do campo Anuncio eu apaguei as outras e foquei em analisar as colunas desse campo. Após fazer essa separação comecei a analisar e fazer todos os tratamentos de cada uma das colunas, um deles foi transformar os dados das colunas "quartos", "suites", "banheiros", "vaga", "area_total" e "area_util" de listas para inteiros. Em seguida, precisei extrair da coluna "endereco" apenas as informações de "zona" e "bairro" para transformar apenas elas duas como colunas no DataFrame, logo depois fui separar os campos da coluna "valores" para cada uma ser um campo ser coluna assim como tinha feito na coluna "endereco" já que nessa coluna "valores" tinha as informações de condominio, iptu, tipo, e valor.
 
 Por último após tratar todos esses dados finalizei o Notebook salvando esse DataFrame que tinha criado com todas as informações de Anuncio no formato Parquet, que é um formato de arquivo de código aberto e orientado por colunas, ele é bastante eficiente quando se trata de armazenar e analisar grandes volumes de dados. Também salvei o DataFrame em CSV, depois fiz um teste de desempenho entre a leitura dos dois arquivos.
+
+---
 
 ### -  **2º semana:** 
 
