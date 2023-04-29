@@ -49,7 +49,7 @@ O projeto usou uma base de dados de imóveis na cidade do Rio de Janeiro, onde a
 
 <!-- -   **Semana 4:** Ajustes gerais e correções de bugs. -->
 
-### -  **1º semana:** ✔️
+### -  **1º semana:** 
 
 Na primeira semana eu baixei a biblioteca do PySpark para iniciar a leitura da base de dados para utilizar no projeto, depois de ler os dados fui explorar para tratar os dados, separar cada um dos camps da Base de Dados e deixar apenas as informações do campo "anuncio" já que nessa base tinha 3 campos principais que eram: Anuncio, Imagem e Usuario.
 
@@ -57,7 +57,7 @@ Então, como precisaria para analisar apenas as informações do campo Anuncio e
 
 Por último após tratar todos esses dados finalizei o Notebook salvando esse DataFrame que tinha criado com todas as informações de Anuncio no formato Parquet, que é um formato de arquivo de código aberto e orientado por colunas, ele é bastante eficiente quando se trata de armazenar e analisar grandes volumes de dados. Também salvei o DataFrame em CSV, depois fiz um teste de desempenho entre a leitura dos dois arquivos.
 
-### -  **2º semana:** ✔️
+### -  **2º semana:** 
 
 No inicio do Notebook dessa semana utilizei a base de dados que teve algumas transformações e salvei no final da primeira semana, depois fiz uma etapa muito importante na construção de modelos de Machine Learning que é a seleção de features, escolhendo quais colunas são importante e descartar as irrelevantes para a análise reduzindo a complexidade dos dados inseridos que por conseequência o modelo irá demorar menos tempo para ser ajustado. Nesse processo descartei as colunas ("area_total", "tipo_anuncio", "tipo_unidade", "tipo_uso" e "tipo") e antes existia duas colunas com muitos dados iguais que eram a ('area_util', 'area_total'), então verifiquei qual das duas tinha mais dados nulos e descobri que era a ("area_total").
 
@@ -69,7 +69,7 @@ Então após todos esses tratamentos nas colunas comecei a preparação dos dado
 
 ---
 
-## -  **3º e 4º semana:**
+### -  **3º e 4º semana:**
 
 Iniciei o notebook utilizando a base de dados que tinha feito o tratamento na última semana para utilizar no modelo de Machine Learning de Regressão. Após isso, apliquei as transformações para utilizar os dados no modelo de clustering utilizando o **VectorAssembler** e fiz uma padronização nos dados para consegui utilizar o PCA neles, por meio da classe **StandardScaler** **do PySpark** para realizar esse processo e criar **o** modelo de recomendação, mas antes disso preciso reduzir a dimensão dos dados e para fazer isso preciso utilizar a técnica chamada PCA assim teria um novo conjunto de dados onde as colunas serão uma combinação linear das colunas originais. Após a transformação com o PCA posso utilizar o método **explainedVariance**que retorna a variância explicada por cada componente principal, com esse método conseguiria encontrar o número ideal de componentes princiapis que os dados devem possuir.
 
